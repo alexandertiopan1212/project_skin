@@ -11,8 +11,9 @@ from src.utils import analyze_products_batch, is_positive_summary, get_dermatolo
 from src.ai_chat import get_chat_response_streaming
 
 # Load API Key
-load_dotenv()
-OPENROUTER_API_KEY = os.getenv("LLM_API_KEY")
+# load_dotenv()
+# OPENROUTER_API_KEY = os.getenv("LLM_API_KEY")
+OPENROUTER_API_KEY = st.secrets["LLM_API_KEY"]
 
 # Init session state
 for key in ["show_chat", "chat_history", "final_products", "skin_types", "concerns", "form_submitted"]:
